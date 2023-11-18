@@ -27,8 +27,7 @@ void pop(WebPageStack *s) {
         assert("Stack underflow. ");
     }
 
-    // free the memory allocated to the webpage
-    free(s->_contents[--s->_top]);
+    --s->_top;
 }
 
 WebPage *peek(const WebPageStack *s) {
@@ -40,7 +39,5 @@ WebPage *peek(const WebPageStack *s) {
 }
 
 void clear_stack(WebPageStack *s) {
-    while(s->_top > 0) {
-        pop(s);
-    }
+    s->_top = 0;
 }
