@@ -19,6 +19,13 @@ void push(WebPageStack *s, WebPage *i) {
     if(s->_top == s->_capacity) {
         assert("Stack overflow. ");
     }
+
+    // if the pointer on the top of the stack is not NULL, free it
+    // before assigning the new pointer to the top of the stack
+    if(s->_contents[s->_top] != NULL) {
+        free(s->_contents[s->_top]);
+    }
+
     s->_contents[s->_top++] = i;
 }
 
