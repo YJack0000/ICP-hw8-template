@@ -7,7 +7,6 @@
 typedef struct web_page {
     char url[URL_MAX_LENGTH];
     char title[TITLE_MAX_LENGTH];
-    int isVisited;
 } WebPage;
 
 WebPage* create_webpage(char* url, char* title);
