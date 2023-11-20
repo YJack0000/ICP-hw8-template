@@ -20,12 +20,6 @@ void push(WebPageStack *s, WebPage *i) {
         assert("Stack overflow. ");
     }
 
-    // if the pointer on the top of the stack is not NULL, free it
-    // before assigning the new pointer to the top of the stack to prevent memory leak
-    if(s->_contents[s->_top] != NULL) {
-        free(s->_contents[s->_top]);
-    }
-
     s->_contents[s->_top++] = i;
 }
 
@@ -46,11 +40,5 @@ WebPage *peek(const WebPageStack *s) {
 }
 
 void clear_stack(WebPageStack *s) {
-    while(s->_top > 0) {
-        // free the memory allocated for the webpage
-        // if the not freed the memory, it will cause memory leak
-        free(s->_contents[--s->_top]);
-        s->_contents[s->_top] = NULL;
-    }
     s->_top = 0;
 }
