@@ -16,7 +16,7 @@ void destroy_webpage(WebPage* page) {
 
 void print_webpage(WebPage* page) {
     printf("Title: %s\n", page->title);
-    printf("Url: %s\n", page->url);
+    printf("URL: %s\n", page->url);
 }
 
 void deep_copy_webpage(WebPage* dest, WebPage* src) {
