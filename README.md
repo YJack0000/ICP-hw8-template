@@ -76,16 +76,16 @@ sample output 2:
 ```
 ---
 Title: instagram
-Url: https://www.instagram.com
+URL: https://www.instagram.com
 ---
 ---
 Title: nycu
-Url: https://www.nycu.edu.tw
+URL: https://www.nycu.edu.tw
 ---
 Cannot navigate forward
 ---
 Title: facebook
-Url: https://www.facebook.com
+URL: https://www.facebook.com
 ---
 ```
 # ICP-hw8-template
