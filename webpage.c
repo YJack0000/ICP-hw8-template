@@ -11,8 +11,6 @@ WebPage* create_webpage(char* url, char* title) {
 }
 
 void destroy_webpage(WebPage* page) {
-    free(page->url);
-    free(page->title);
     free(page);
 }
 
